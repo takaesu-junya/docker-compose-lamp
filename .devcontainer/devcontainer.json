@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": true,
+			"azureDnsAutoDetection": true,
+			"installDockerBuildx": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v1"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"installDirectlyFromGitHubRelease": true,
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/aws-cdk:2": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/json-server:1": {
+			"version": "latest"
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/setup.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ZhouSir.visual-snake-code",
+				"bierner.markdown-preview-github-styles"
+			]
+		}
+	},
+}
