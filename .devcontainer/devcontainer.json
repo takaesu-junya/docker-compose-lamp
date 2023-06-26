@@ -3,6 +3,9 @@
 {
 	"name": "Ubuntu",
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"runArgs": [
+		"--name=codespaces-lamp"
+	],
 	"features": {
 		"ghcr.io/devcontainers/features/aws-cli:1": {
 			"version": "latest"
